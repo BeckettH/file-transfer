@@ -55,7 +55,7 @@ app.get('/sign-s3', (req, res) => {
     const returnData = {
       signedRequest: data,
       // url may not be needed
-      url: `https://gateway.tardigradeshare.io/${s3Bucket}/${fileName}`,
+      url: `${process.env.BUCKET}/${s3Bucket}/${fileName}`,
       fileName,
     };
     console.log(JSON.stringify(returnData));

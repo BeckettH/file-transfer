@@ -1,11 +1,12 @@
 # file-transfer
-Current version: A simple application that allows someone to anonymously upload a file through Amazon S3, and then spits out a link that can be used to download that file.
+Current version: A simple application that allows someone to anonymously upload a file through an Amazon S3 endpoint, and then spits out a link that can be used to download that file.
 
 To run:
 1. Do an "npm install"
-2. Run "npm run build" to build the app using webpack
-3. Run "npm run dev" to start up the dev server
-4. Visit localhost:8080 to test out the application
+2. Add the following S3 endpoint details to a .env file at the top level of the project: ENDPOINT, ACCESSKEYID, SECRETACCESSKEY, BUCKET
+3. Run "npm run build" to build the app using webpack
+4. Run "npm run dev" to start up the dev server
+5. Visit localhost:8080 to test out the application
 
 Future updates:
 1. Generate a unique string to associate with the uploaded file (and potentially rename the file to use that string as well so it can be the unique key in S3 for that file). 
